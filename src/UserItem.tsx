@@ -7,7 +7,6 @@ export const ProfilePicture = () => {
         src="https://s0.tchkcdn.com/g-LB7hONdudzdWMZJ6xk7tpg/11/131920/660x480/f/0/jjjj.jpg"
         alt="profile_picture"
       ></img>
-      ;
     </picture>
   );
 };
@@ -52,13 +51,13 @@ export const ProfileCitation = () => {
 
 export const ProfileHobbies = () => {
   return (
-    <ol>
-      <h4>Мои увлечение</h4>
+    <ul>
+      <h4>Мои увлечения</h4>
       <li> Чтение </li>
       <li> Плавание </li>
       <li> Программирование </li>
       <li> Вязание </li>
-    </ol>
+    </ul>
   );
 };
 
