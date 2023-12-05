@@ -1,4 +1,40 @@
 import React from "react";
+import userData from "./App.jsx";
+
+type UserDataProps = {
+  img: string;
+  name: string;
+  bio: string;
+  citation: string;
+  hobbiesTitle: string;
+  hobbi1: string;
+  hobbi2: string;
+  hobbi3: string;
+  hobbi4: string;
+};
+
+const UserDataItem = { props: UserDataProps } => {
+  return (
+    <div>
+    <picture>
+    <img
+      src = {props.name}
+      alt = "profile_picture"
+    ></img>
+  </picture>
+  <h3>{props.img}</h3>
+  <p>{props.bio}</p>
+  <blockquote>{props.citation}</blockquote>
+  <ul>
+      <h4>{props. hobbiesTitle}</h4>
+      <li> {props. hobbi1}</li>
+      <li> {props. hobbi2} </li>
+      <li> {props. hobbi3} </li>
+      <li>{props. hobbi4} </li>
+    </ul>
+  </div>
+);
+};
 
 export const ProfilePicture = () => {
   return (
@@ -12,7 +48,7 @@ export const ProfilePicture = () => {
 };
 
 export const ProfileName = () => {
-  return <h3>Дмитрий Стахович</h3>;
+  return ;
 };
 
 export const ProfileBio = () => {
