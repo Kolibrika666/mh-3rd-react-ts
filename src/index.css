@@ -1,9 +1,12 @@
 body {
-  max-width: 1000px;
   margin: 0 auto;
+  box-sizing: border-box;
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  justify-content: center;
 }
 
-h3 {
-  font-size: 28px;
-  text-align: center;
+button {
+  background-color: transparent;
+  border: none;
 }
