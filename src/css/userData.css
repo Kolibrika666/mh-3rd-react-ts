@@ -1,11 +1,29 @@
 div {
   max-width: 1000px;
   display: grid;
-  background-color: white;
-  padding: 10px;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
   justify-items: center;
 }
 
 img {
   width: 100%;
+}
+
+blockquote {
+  width: 100%;
+  background-color: rgb(53, 53, 53);
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+p {
+  background-color: rgb(249, 249, 249);
+  padding: 10px;
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 28px;
 }
