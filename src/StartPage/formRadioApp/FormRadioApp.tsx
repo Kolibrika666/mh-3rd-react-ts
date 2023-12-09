@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { genres } from "../RadioList/ItemPadioApp";
 import "./FormRadioApp.module.css";
+
 const FormRadioApp = () => {
   const [songName, setSongName] = useState("");
   const [singer, setSinger] = useState("");
@@ -9,7 +11,6 @@ const FormRadioApp = () => {
   };
 
   const SelectGenre = () => {
-    const genres: string[] = ["pok", "блюз", "поп"];
     return (
       <select>
         <option value={genres[0]}>{genres[0]}</option>
