@@ -17,17 +17,6 @@ const FormRadioApp = ({ addTrack }: AddTrackFormProps) => {
       genre: genre,
     });
   };
-
-  const SelectGenre = () => {
-    return (
-      <select>
-        <option value={genre}>{genres[0]}</option>
-        <option value={genre}>{genres[1]}</option>
-        <option value={genre}>{genres[2]}</option>
-      </select>
-    );
-  };
-
   return (
     <form onSubmit={hendleSubmit}>
       <input
@@ -42,7 +31,15 @@ const FormRadioApp = ({ addTrack }: AddTrackFormProps) => {
         placeholder="Исполнитель"
         onChange={(e) => setSinger(e.target.value)}
       />
-      <SelectGenre />
+      <select
+        defaultValue={genres[0]}
+        value={genres}
+        onChange={(e) => setGenre(e.target.value)}
+      >
+        <option value={genre[0]}>{genres[0]}</option>
+        <option value={genre[1]}>{genres[1]}</option>
+        <option value={genre[2]}>{genres[2]}</option>
+      </select>
       <button type="submit">Отправить</button>
     </form>
   );
