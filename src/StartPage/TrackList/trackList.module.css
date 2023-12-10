@@ -1,0 +1,10 @@
+article {
+  display: flex;
+  width: 1100px;
+  justify-content: space-between;
+  padding: 10px;
+}
+article > p {
+  color: black;
+  font-size: 24px;
+}
