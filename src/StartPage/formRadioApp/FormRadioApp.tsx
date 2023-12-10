@@ -1,21 +1,29 @@
 import { useState } from "react";
-import { genres } from "../RadioList/ItemPadioApp";
+import { genres } from "../ItemPadioApp";
 import "./FormRadioApp.module.css";
+import { TrackType } from "../ItemPadioApp";
 
-const FormRadioApp = () => {
+type AddTrackFormProps = { addTrack(obj: TrackType): void };
+const FormRadioApp = ({ addTrack }: AddTrackFormProps) => {
   const [songName, setSongName] = useState("");
   const [singer, setSinger] = useState("");
+  const [genre, setGenre] = useState("");
 
   const hendleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
+    addTrack({
+      nameSong: songName,
+      singer: singer,
+      genre: genre,
+    });
   };
 
   const SelectGenre = () => {
     return (
       <select>
-        <option value={genres[0]}>{genres[0]}</option>
-        <option value={genres[1]}>{genres[1]}</option>
-        <option value={genres[2]}>{genres[2]}</option>
+        <option value={genre}>{genres[0]}</option>
+        <option value={genre}>{genres[1]}</option>
+        <option value={genre}>{genres[2]}</option>
       </select>
     );
   };
