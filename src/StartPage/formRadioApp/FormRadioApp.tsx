@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { genres } from "../ItemPadioApp";
+import { genres } from "../TrackList/ItemPadioApp";
 import "./FormRadioApp.module.css";
-import { TrackType } from "../ItemPadioApp";
+import { TrackType } from "../TrackList/ItemPadioApp";
 
 type AddTrackFormProps = { addTrack(obj: TrackType): void };
 const FormRadioApp = ({ addTrack }: AddTrackFormProps) => {

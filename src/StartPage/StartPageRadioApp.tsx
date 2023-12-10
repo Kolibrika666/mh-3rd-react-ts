@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./StartPageRadio.module.css";
+import s from "./StartPageRadio.module.css";
 import FormRadioApp from "./formRadioApp/FormRadioApp";
 // import { TrackType } from "./ItemPadioApp";
 import TracksList from "./TrackList/trackList";
-import { getTrack } from "./ItemPadioApp";
-import { TrackType } from "./ItemPadioApp";
+import { getTrack } from "./TrackList/ItemPadioApp";
+import { TrackType } from "./TrackList/ItemPadioApp";
 
 function StartPageRadioApp() {
   const [trackList, setTrackList] = useState<TrackType[]>(getTrack());
@@ -19,7 +19,9 @@ function StartPageRadioApp() {
       <h3>Отправляйте заявку и мы сыграем вашу любимую песню!</h3>
       <section>
         <FormRadioApp addTrack={addTrack} />
-        <TracksList radio={trackList} />
+        <article className={s.radioContainer}>
+          <TracksList radio={trackList} />
+        </article>
       </section>
     </main>
   );
