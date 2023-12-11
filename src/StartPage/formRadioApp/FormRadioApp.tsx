@@ -33,12 +33,12 @@ const FormRadioApp = ({ addTrack }: AddTrackFormProps) => {
       />
       <select
         defaultValue={genres[0]}
-        value={genres}
+        value={genre}
         onChange={(e) => setGenre(e.target.value)}
       >
-        <option value={genre[0]}>{genres[0]}</option>
-        <option value={genre[1]}>{genres[1]}</option>
-        <option value={genre[2]}>{genres[2]}</option>
+        <option value={genres[0]}>{genres[0]}</option>
+        <option value={genres[1]}>{genres[1]}</option>
+        <option value={genres[2]}>{genres[2]}</option>
       </select>
       <button type="submit">Отправить</button>
     </form>
